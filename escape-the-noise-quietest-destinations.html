@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape the Noise: America's Best Destinations for Silence Seekers</title>
+    <meta name="description" content="Most 'peaceful getaway' lists are based on vibes. We used federal noise data to find where you can actually hear silence.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Escape the Noise: America's Best Destinations for Silence Seekers">
+    <meta property="og:description" content="We mapped the quietest places in America. Some results will surprise you.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-night: #0d1117;
+            --color-dusk: #1a1f2e;
+            --color-slate: #2d3548;
+            --color-mist: #8b95a8;
+            --color-cloud: #c9d1e0;
+            --color-snow: #f4f6f9;
+            --color-white: #ffffff;
+            --color-sage: #7c9a8c;
+            --color-sage-light: #a8c4b8;
+            --color-sand: #d4c4a8;
+            --color-sunset: #e8a87c;
+            --color-coral: #cf6b6b;
+            
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: var(--color-night);
+            background: var(--color-white);
+            overflow-x: hidden;
+        }
+        
+        /* ============================================
+           HERO - EMOTIONAL OPENING
+        ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: var(--space-lg) var(--space-md);
+            background: linear-gradient(180deg, var(--color-night) 0%, var(--color-dusk) 50%, var(--color-slate) 100%);
+            color: var(--color-white);
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(ellipse at 20% 30%, rgba(124, 154, 140, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(212, 196, 168, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        /* Animated stars */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--color-white);
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle 4s ease-in-out infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.8; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .hero-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-sage-light);
+            margin-bottom: var(--space-md);
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.2s forwards;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: var(--space-md);
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.4s forwards;
+        }
+        
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-sage-light);
+        }
+        
+        .hero-question {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-style: italic;
+            color: var(--color-cloud);
+            margin-bottom: var(--space-lg);
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.6s forwards;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 100px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.8s forwards;
+        }
+        
+        .hero-cta:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .hero-cta svg {
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-cta:hover svg {
+            transform: translateY(4px);
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ============================================
+           THE PROBLEM SECTION
+        ============================================ */
+        .problem {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--color-snow);
+        }
+        
+        .problem-inner {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-sage);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .problem h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: var(--space-md);
+        }
+        
+        .problem p {
+            font-size: 1.15rem;
+            color: var(--color-slate);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--color-cloud);
+        }
+        
+        .problem-stat {
+            text-align: center;
+        }
+        
+        .problem-stat-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            color: var(--color-night);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .problem-stat-label {
+            font-size: 0.95rem;
+            color: var(--color-mist);
+        }
+        
+        /* ============================================
+           THE SOLUTION INTRO
+        ============================================ */
+        .solution-intro {
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            background: var(--color-white);
+        }
+        
+        .solution-intro-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .solution-intro h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .solution-intro p {
+            font-size: 1.2rem;
+            color: var(--color-slate);
+        }
+        
+        .data-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-night);
+            color: var(--color-white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: var(--space-md);
+        }
+        
+        .data-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* ============================================
+           DESTINATION CATEGORIES
+        ============================================ */
+        .destinations {
+            padding: var(--space-lg) 0;
+        }
+        
+        .destination-category {
+            padding: var(--space-lg) var(--space-md);
+            position: relative;
+        }
+        
+        .destination-category:nth-child(odd) {
+            background: var(--color-snow);
+        }
+        
+        .category-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .category-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--color-white);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+        
+        .category-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-text p {
+            color: var(--color-mist);
+            font-size: 1.05rem;
+            max-width: 500px;
+        }
+        
+        .destination-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .destination-card {
+            background: var(--color-white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        
+        .card-image {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        /* Desert gradient */
+        .card-image--desert .card-image-bg {
+            background: linear-gradient(135deg, #e8d4b8 0%, #c9a87c 50%, #a67c52 100%);
+        }
+        
+        /* Forest gradient */
+        .card-image--forest .card-image-bg {
+            background: linear-gradient(135deg, #4a6741 0%, #2d4a3e 50%, #1a3028 100%);
+        }
+        
+        /* Mountain gradient */
+        .card-image--mountain .card-image-bg {
+            background: linear-gradient(135deg, #6b7c91 0%, #4a5568 50%, #2d3748 100%);
+        }
+        
+        /* Coastal gradient */
+        .card-image--coastal .card-image-bg {
+            background: linear-gradient(135deg, #7ca8b8 0%, #5d8aa8 50%, #3d6a88 100%);
+        }
+        
+        .card-rank {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            background: rgba(0,0,0,0.6);
+            color: var(--color-white);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-db {
+            position: absolute;
+            bottom: var(--space-sm);
+            right: var(--space-sm);
+            background: rgba(255,255,255,0.95);
+            color: var(--color-night);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .card-db svg {
+            width: 14px;
+            height: 14px;
+            color: var(--color-sage);
+        }
+        
+        .card-body {
+            padding: var(--space-md);
+        }
+        
+        .card-location {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .card-town {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+        }
+        
+        .card-state {
+            font-size: 1rem;
+            color: var(--color-mist);
+        }
+        
+        .card-description {
+            font-size: 1rem;
+            color: var(--color-slate);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .card-tag {
+            display: inline-block;
+            background: var(--color-snow);
+            color: var(--color-slate);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Perfect score highlight */
+        .destination-card--perfect {
+            border: 2px solid var(--color-sage);
+        }
+        
+        .destination-card--perfect .card-rank {
+            background: var(--color-sage);
+        }
+        
+        /* ============================================
+           NOISE TRAPS WARNING
+        ============================================ */
+        .traps {
+            padding: var(--space-xl) var(--space-md);
+            background: linear-gradient(180deg, #1a1a1a 0%, #2d2a2a 100%);
+            color: var(--color-white);
+        }
+        
+        .traps-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .traps-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .traps-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-coral);
+            color: var(--color-white);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .traps h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .traps-header p {
+            color: var(--color-cloud);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .traps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-sm);
+        }
+        
+        .trap-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: var(--space-sm) var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            transition: background 0.3s ease;
+        }
+        
+        .trap-card:hover {
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .trap-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .trap-info {
+            flex: 1;
+        }
+        
+        .trap-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.15rem;
+        }
+        
+        .trap-location {
+            font-size: 0.85rem;
+            color: var(--color-mist);
+        }
+        
+        .trap-reason {
+            background: rgba(207, 107, 107, 0.2);
+            color: #f0a0a0;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        /* ============================================
+           BOOKING TIPS
+        ============================================ */
+        .tips {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--color-white);
+        }
+        
+        .tips-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .tips h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .tip-card {
+            background: var(--color-snow);
+            border-radius: 20px;
+            padding: var(--space-md);
+            text-align: center;
+        }
+        
+        .tip-number {
+            width: 48px;
+            height: 48px;
+            background: var(--color-night);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin: 0 auto var(--space-sm);
+        }
+        
+        .tip-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tip-card p {
+            font-size: 0.95rem;
+            color: var(--color-slate);
+        }
+        
+        /* ============================================
+           DECIBEL EXPLAINER
+        ============================================ */
+        .explainer {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--color-snow);
+        }
+        
+        .explainer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .explainer h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.5vw, 2rem);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .db-scale {
+            background: var(--color-white);
+            border-radius: 24px;
+            padding: var(--space-md);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+        }
+        
+        .db-row {
+            display: grid;
+            grid-template-columns: 90px 1fr 160px;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-snow);
+        }
+        
+        .db-row:last-child {
+            border-bottom: none;
+        }
+        
+        .db-level {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .db-bar {
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+        }
+        
+        .db-bar span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .db-row[data-level="1"] .db-bar {
+            width: 15%;
+            background: linear-gradient(90deg, #2d5a2d, #4a8c4a);
+        }
+        
+        .db-row[data-level="2"] .db-bar {
+            width: 25%;
+            background: linear-gradient(90deg, #4a8c4a, #6ba86b);
+        }
+        
+        .db-row[data-level="3"] .db-bar {
+            width: 40%;
+            background: linear-gradient(90deg, #7db87d, #a8c896);
+        }
+        
+        .db-row[data-level="4"] .db-bar {
+            width: 60%;
+            background: linear-gradient(90deg, #c9a227, #d4b84a);
+        }
+        
+        .db-row[data-level="5"] .db-bar {
+            width: 80%;
+            background: linear-gradient(90deg, #d48a4a, #c96b3d);
+        }
+        
+        .db-row[data-level="6"] .db-bar {
+            width: 100%;
+            background: linear-gradient(90deg, #b85c38, #8b3a2a);
+        }
+        
+        .db-example {
+            font-size: 0.85rem;
+            color: var(--color-mist);
+        }
+        
+        /* ============================================
+           FULL DATA (COLLAPSED)
+        ============================================ */
+        .full-data {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--color-white);
+        }
+        
+        .full-data-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .full-data h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.5vw, 2rem);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .full-data > p {
+            text-align: center;
+            color: var(--color-mist);
+            margin-bottom: var(--space-md);
+        }
+        
+        .data-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+            justify-content: center;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid var(--color-cloud);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: border-color 0.2s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--color-sage);
+        }
+        
+        .filter-btn {
+            padding: 0.9rem 1.5rem;
+            border: 2px solid var(--color-cloud);
+            border-radius: 12px;
+            background: var(--color-white);
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--color-sage);
+        }
+        
+        .filter-btn.active {
+            background: var(--color-night);
+            border-color: var(--color-night);
+            color: var(--color-white);
+        }
+        
+        .data-table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        .data-table th {
+            background: var(--color-night);
+            color: var(--color-white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        
+        .data-table th:hover {
+            background: var(--color-dusk);
+        }
+        
+        .data-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--color-snow);
+            background: var(--color-white);
+        }
+        
+        .data-table tr:hover td {
+            background: var(--color-snow);
+        }
+        
+        .data-table .rank-col {
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        
+        .data-table .town-col {
+            font-weight: 600;
+        }
+        
+        .data-table .score-col {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+        }
+        
+        .db-pill {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .db-pill--quiet { background: #e8f5e8; color: #2d5a2d; }
+        .db-pill--good { background: #f0f7e8; color: #4a6b3d; }
+        .db-pill--moderate { background: #fef7e8; color: #8a6b20; }
+        .db-pill--noisy { background: #fef0e8; color: #8a4a20; }
+        .db-pill--loud { background: #fde8e8; color: #8a2020; }
+        
+        .note-col {
+            max-width: 220px;
+            font-size: 0.85rem;
+            color: var(--color-mist);
+        }
+        
+        @media (max-width: 768px) {
+            .note-col {
+                display: none;
+            }
+        }
+        
+        /* ============================================
+           METHODOLOGY (COLLAPSED)
+        ============================================ */
+        .methodology {
+            padding: var(--space-lg) var(--space-md);
+            background: var(--color-snow);
+        }
+        
+        .methodology-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .methodology-toggle {
+            width: 100%;
+            background: var(--color-white);
+            border: 1px solid var(--color-cloud);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .methodology-toggle:hover {
+            border-color: var(--color-sage);
+        }
+        
+        .methodology-toggle svg {
+            transition: transform 0.3s ease;
+        }
+        
+        .methodology-toggle.open svg {
+            transform: rotate(180deg);
+        }
+        
+        .methodology-content {
+            display: none;
+            background: var(--color-white);
+            border: 1px solid var(--color-cloud);
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            padding: var(--space-md);
+        }
+        
+        .methodology-content.open {
+            display: block;
+        }
+        
+        .methodology-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            margin-top: var(--space-sm);
+        }
+        
+        .methodology-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .methodology-content p,
+        .methodology-content li {
+            font-size: 0.95rem;
+            color: var(--color-slate);
+        }
+        
+        .methodology-content ul {
+            list-style: none;
+            padding-left: 1.2rem;
+        }
+        
+        .methodology-content li {
+            position: relative;
+            padding: 0.3rem 0;
+        }
+        
+        .methodology-content li::before {
+            content: '→';
+            position: absolute;
+            left: -1.2rem;
+            color: var(--color-sage);
+        }
+        
+        /* ============================================
+           CTA / DOWNLOAD
+        ============================================ */
+        .cta {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--color-night);
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        .cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .cta p {
+            color: var(--color-cloud);
+            margin-bottom: var(--space-md);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn--primary {
+            background: var(--color-white);
+            color: var(--color-night);
+        }
+        
+        .btn--secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn--secondary:hover {
+            border-color: rgba(255,255,255,0.6);
+        }
+        
+        /* ============================================
+           FOOTER
+        ============================================ */
+        footer {
+            padding: var(--space-lg) var(--space-md);
+            background: var(--color-dusk);
+            color: var(--color-cloud);
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        footer a {
+            color: var(--color-sage-light);
+        }
+        
+        /* ============================================
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 768px) {
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .destination-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .db-row {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+                padding: 1rem 0;
+            }
+            
+            .db-bar {
+                width: 100% !important;
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <header class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">A Data-Driven Travel Guide</p>
+            <h1>Escape the Noise</h1>
+            <p class="hero-question">When was the last time you heard <em>nothing</em>?</p>
+            <a href="#problem" class="hero-cta">
+                Find your silence
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+    
+    <!-- ============================================
+         THE PROBLEM
+    ============================================ -->
+    <section class="problem" id="problem">
+        <div class="problem-inner">
+            <p class="section-label">The Problem</p>
+            <h2>You booked a "peaceful getaway." <br>So why can't you sleep?</h2>
+            <p>That charming small town? It's built on a highway. The coastal retreat? Fog horns at 3am. The mountain escape? Train tracks run through it.</p>
+            <p>Most "quiet destination" lists are based on vibes—pretty photos and wishful thinking. We wanted data.</p>
+            <p>So we analyzed federal noise measurements from the U.S. Department of Transportation to find where silence actually exists in America.</p>
+            
+            <div class="problem-stats">
+                <div class="problem-stat">
+                    <div class="problem-stat-number">100M+</div>
+                    <div class="problem-stat-label">Americans exposed to harmful noise levels</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="problem-stat-number">55 dB</div>
+                    <div class="problem-stat-label">Threshold where sleep quality drops</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="problem-stat-number">75+</div>
+                    <div class="problem-stat-label">Destinations we analyzed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         THE SOLUTION INTRO
+    ============================================ -->
+    <section class="solution-intro">
+        <div class="solution-intro-inner">
+            <h2>We mapped it. Here's where silence lives.</h2>
+            <p>Every destination below was verified against the DOT's National Transportation Noise Map—measuring actual decibel levels from highways, airports, and rail lines.</p>
+            <div class="data-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Verified by federal noise data
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         DESTINATIONS BY CATEGORY
+    ============================================ -->
+    <div class="destinations">
+        
+        <!-- DESERT SILENCE -->
+        <section class="destination-category">
+            <div class="category-inner">
+                <div class="category-header">
+                    <div class="category-icon">🏜️</div>
+                    <div class="category-text">
+                        <h2>Desert Silence</h2>
+                        <p>Where the only sound is wind through the canyon. The quietest places in America.</p>
+                    </div>
+                </div>
+                <div class="destination-cards">
+                    <div class="destination-card destination-card--perfect">
+                        <div class="card-image card-image--desert">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">🏆 #1 Quietest</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                &lt; 40 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Baker</span>
+                                <span class="card-state">Nevada</span>
+                            </div>
+                            <p class="card-description">The darkest pixel on the entire noise map. Gateway to Great Basin National Park. Population under 100. This is as quiet as America gets.</p>
+                            <span class="card-tag">Perfect Score: 110</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card destination-card--perfect">
+                        <div class="card-image card-image--desert">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">🏆 #1 Quietest</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                &lt; 40 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Terlingua</span>
+                                <span class="card-state">Texas</span>
+                            </div>
+                            <p class="card-description">Ghost town vibes near Big Bend. The only noise is the wind. Miles from anything—exactly the point.</p>
+                            <span class="card-tag">Perfect Score: 110</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--desert">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#9</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                45–50 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Patagonia</span>
+                                <span class="card-state">Arizona</span>
+                            </div>
+                            <p class="card-description">Wine country serenity near the border. Slight road hum but excellent overall. Birding paradise.</p>
+                            <span class="card-tag">Score: 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MOUNTAIN QUIET -->
+        <section class="destination-category">
+            <div class="category-inner">
+                <div class="category-header">
+                    <div class="category-icon">🏔️</div>
+                    <div class="category-text">
+                        <h2>Mountain Quiet</h2>
+                        <p>High altitude, low decibels. Valleys that block noise and towns where the road ends.</p>
+                    </div>
+                </div>
+                <div class="destination-cards">
+                    <div class="destination-card">
+                        <div class="card-image card-image--mountain">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#4</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Stanley</span>
+                                <span class="card-state">Idaho</span>
+                            </div>
+                            <p class="card-description">International Dark Sky Reserve. Deep valley isolation in the Sawtooth Mountains. The noise map is pitch black here.</p>
+                            <span class="card-tag">Score: 101</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--mountain">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#5</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Lake City</span>
+                                <span class="card-state">Colorado</span>
+                            </div>
+                            <p class="card-description">The road literally ends here. Dead-end valley deep in the San Juans. No through-traffic possible.</p>
+                            <span class="card-tag">Score: 101</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--mountain">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#6</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Westcliffe</span>
+                                <span class="card-state">Colorado</span>
+                            </div>
+                            <p class="card-description">Mountains completely block highway noise. Another Dark Sky Community. The Sangre de Cristos as your sound barrier.</p>
+                            <span class="card-tag">Score: 101</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--mountain">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#7</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Philipsburg</span>
+                                <span class="card-state">Montana</span>
+                            </div>
+                            <p class="card-description">Hidden gem tucked away from I-90. Historic mining town charm in a quiet valley. Montana's best-kept secret.</p>
+                            <span class="card-tag">Score: 101</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOREST STILLNESS -->
+        <section class="destination-category">
+            <div class="category-inner">
+                <div class="category-header">
+                    <div class="category-icon">🌲</div>
+                    <div class="category-text">
+                        <h2>Forest Stillness</h2>
+                        <p>Trees absorb sound. These woodland destinations prove it.</p>
+                    </div>
+                </div>
+                <div class="destination-cards">
+                    <div class="destination-card">
+                        <div class="card-image card-image--forest">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#3</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Grafton</span>
+                                <span class="card-state">Vermont</span>
+                            </div>
+                            <p class="card-description">Historic village layout naturally minimizes car traffic. No noise footprint on the federal map. Vermont charm without Vermont traffic.</p>
+                            <span class="card-tag">Score: 103</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--forest">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#11</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                45–50 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Lanesboro</span>
+                                <span class="card-state">Minnesota</span>
+                            </div>
+                            <p class="card-description">Bluffs block all external noise. Root River valley acts as a natural sound barrier. The Midwest's quietest town.</p>
+                            <span class="card-tag">Score: 98</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--forest">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#20</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                45–50 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Townsend</span>
+                                <span class="card-state">Tennessee</span>
+                            </div>
+                            <p class="card-description">The "Peaceful Side of the Smokies"—and the data proves it. A single road into a dark valley. Skip Gatlinburg, come here.</p>
+                            <span class="card-tag">Score: 93</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- COASTAL CALM -->
+        <section class="destination-category">
+            <div class="category-inner">
+                <div class="category-header">
+                    <div class="category-icon">🌊</div>
+                    <div class="category-text">
+                        <h2>Coastal Calm</h2>
+                        <p>Waves masking noise, dead-end peninsulas, and the edge of the map.</p>
+                    </div>
+                </div>
+                <div class="destination-cards">
+                    <div class="destination-card">
+                        <div class="card-image card-image--coastal">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#8</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Castine</span>
+                                <span class="card-state">Maine</span>
+                            </div>
+                            <p class="card-description">The road literally ends at this coastal peninsula. Zero through-traffic. Maritime Academy town with library-level quiet.</p>
+                            <span class="card-tag">Score: 100</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--coastal">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#10</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                40–45 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Lubec</span>
+                                <span class="card-state">Maine</span>
+                            </div>
+                            <p class="card-description">Easternmost point in the United States. Nothing but ocean silence beyond. End of the road, end of the noise.</p>
+                            <span class="card-tag">Score: 100</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--coastal">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#19</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                45–50 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Elk</span>
+                                <span class="card-state">California</span>
+                            </div>
+                            <p class="card-description">Much quieter than nearby Mendocino. Thinner traffic on this stretch of Highway 1. Coastal views without the coastal crowds.</p>
+                            <span class="card-tag">Score: 95</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card">
+                        <div class="card-image card-image--coastal">
+                            <div class="card-image-bg"></div>
+                            <span class="card-rank">#25</span>
+                            <span class="card-db">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+                                45–50 dB
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-location">
+                                <span class="card-town">Baileys Harbor</span>
+                                <span class="card-state">Wisconsin</span>
+                            </div>
+                            <p class="card-description">The quiet side of Door County. While the rest of the peninsula gets slammed with tourists, this harbor stays serene.</p>
+                            <span class="card-tag">Score: 85</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- ============================================
+         NOISE TRAPS
+    ============================================ -->
+    <section class="traps">
+        <div class="traps-inner">
+            <div class="traps-header">
+                <span class="traps-label">⚠️ Warning</span>
+                <h2>Beautiful Towns That Sound Terrible</h2>
+                <p>These Instagram-famous destinations look peaceful. The noise map tells a different story. Book carefully—or don't book at all.</p>
+            </div>
+            
+            <div class="traps-grid">
+                <div class="trap-card">
+                    <span class="trap-icon">🚂</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Marfa, TX</div>
+                        <div class="trap-location">60–70 dB · Score: 70</div>
+                    </div>
+                    <span class="trap-reason">Active Rail Line</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🏍️</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Jerome, AZ</div>
+                        <div class="trap-location">60–70 dB · Score: 70</div>
+                    </div>
+                    <span class="trap-reason">Motorcycle Echo</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🔊</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Bisbee, AZ</div>
+                        <div class="trap-location">60–70 dB · Score: 70</div>
+                    </div>
+                    <span class="trap-reason">Canyon Amplifier</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🚛</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Kanab, UT</div>
+                        <div class="trap-location">65–75 dB · Score: 70</div>
+                    </div>
+                    <span class="trap-reason">Freight Corridor</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">✈️</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Talkeetna, AK</div>
+                        <div class="trap-location">55–65 dB · Score: 76</div>
+                    </div>
+                    <span class="trap-reason">Bush Planes All Day</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🛩️</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Coupeville, WA</div>
+                        <div class="trap-location">55–65 dB · Score: 75</div>
+                    </div>
+                    <span class="trap-reason">Navy Growler Jets</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🚗</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Mendocino, CA</div>
+                        <div class="trap-location">60–65 dB · Score: 65</div>
+                    </div>
+                    <span class="trap-reason">Hwy 1 Tourist Traffic</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🏔️</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Truckee, CA</div>
+                        <div class="trap-location">65–75 dB · Score: 46</div>
+                    </div>
+                    <span class="trap-reason">I-80 + Private Jets</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🚃</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Hot Springs, NC</div>
+                        <div class="trap-location">55–60 dB · Score: 76</div>
+                    </div>
+                    <span class="trap-reason">Rail Through Town</span>
+                </div>
+                
+                <div class="trap-card">
+                    <span class="trap-icon">🛣️</span>
+                    <div class="trap-info">
+                        <div class="trap-name">Franconia, NH</div>
+                        <div class="trap-location">75–80 dB · Score: 38</div>
+                    </div>
+                    <span class="trap-reason">I-93 Notch Echo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         BOOKING TIPS
+    ============================================ -->
+    <section class="tips">
+        <div class="tips-inner">
+            <h2>How to Protect Your Peace</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-number">1</div>
+                    <h3>Check the Map First</h3>
+                    <p>Before booking, look up your destination on the <a href="https://maps.dot.gov/BTS/NationalTransportationNoiseMap/" target="_blank">DOT Noise Map</a>. Green is good. Red is a warning.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">2</div>
+                    <h3>Look for Rail Lines</h3>
+                    <p>Open Google Maps and check for railroad tracks. Train horns hit 110 dB. Many "quiet" towns have active freight lines.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">3</div>
+                    <h3>Ask About Room Location</h3>
+                    <p>Call ahead. Request a room away from the road, on the upper floors, or facing away from any highway.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">4</div>
+                    <h3>Go Shoulder Season</h3>
+                    <p>Tourist traffic is noise. Visit in spring or fall when the crowds—and their cars—are gone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         DECIBEL EXPLAINER
+    ============================================ -->
+    <section class="explainer">
+        <div class="explainer-inner">
+            <h2>What Do These Numbers Mean?</h2>
+            <div class="db-scale">
+                <div class="db-row" data-level="1">
+                    <span class="db-level">&lt; 40 dB</span>
+                    <div class="db-bar"><span>Perfect</span></div>
+                    <span class="db-example">Library, rural night, leaves rustling</span>
+                </div>
+                <div class="db-row" data-level="2">
+                    <span class="db-level">40–45 dB</span>
+                    <div class="db-bar"><span>Excellent</span></div>
+                    <span class="db-example">Quiet suburb, birdsong, whisper</span>
+                </div>
+                <div class="db-row" data-level="3">
+                    <span class="db-level">45–55 dB</span>
+                    <div class="db-bar"><span>Good</span></div>
+                    <span class="db-example">Light traffic, normal conversation</span>
+                </div>
+                <div class="db-row" data-level="4">
+                    <span class="db-level">55–65 dB</span>
+                    <div class="db-bar"><span>Moderate</span></div>
+                    <span class="db-example">Busy restaurant, AC unit, TV</span>
+                </div>
+                <div class="db-row" data-level="5">
+                    <span class="db-level">65–75 dB</span>
+                    <div class="db-bar"><span>Noisy</span></div>
+                    <span class="db-example">Vacuum cleaner, busy traffic</span>
+                </div>
+                <div class="db-row" data-level="6">
+                    <span class="db-level">75+ dB</span>
+                    <div class="db-bar"><span>Loud</span></div>
+                    <span class="db-example">Highway, train, lawn mower</span>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: var(--space-md); color: var(--color-mist); font-size: 0.95rem;">
+                Every 10 dB increase sounds roughly <strong>twice as loud</strong> to human ears.
+            </p>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         FULL DATA TABLE
+    ============================================ -->
+    <section class="full-data">
+        <div class="full-data-inner">
+            <h2>All 76 Destinations Ranked</h2>
+            <p>The complete dataset. Search, filter, and sort to find your escape.</p>
+            
+            <div class="data-controls">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search by town or state...">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="quiet">Quietest</button>
+                <button class="filter-btn" data-filter="moderate">Moderate</button>
+                <button class="filter-btn" data-filter="loud">Loudest</button>
+            </div>
+            
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="rank">Rank</th>
+                            <th data-sort="town">Town</th>
+                            <th data-sort="state">State</th>
+                            <th data-sort="db">Noise Level</th>
+                            <th data-sort="score">Score</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         METHODOLOGY (COLLAPSED)
+    ============================================ -->
+    <section class="methodology">
+        <div class="methodology-inner">
+            <button class="methodology-toggle" id="methodToggle">
+                <span>📊 Methodology: How We Built This</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </button>
+            <div class="methodology-content" id="methodContent">
+                <h3>Data Source</h3>
+                <p>All noise data comes from the U.S. Department of Transportation's Bureau of Transportation Statistics <a href="https://www.bts.gov/geospatial/national-transportation-noise-map" target="_blank">National Transportation Noise Map</a> (2020 dataset).</p>
+                
+                <h3>What Was Measured</h3>
+                <ul>
+                    <li>Combined aviation, highway, and rail noise levels</li>
+                    <li>Distance to nearest commercial airport</li>
+                    <li>Distance to nearest interstate highway</li>
+                    <li>Population density and environmental type</li>
+                </ul>
+                
+                <h3>Scoring Formula</h3>
+                <ul>
+                    <li>Base score calculated from population + distance metrics</li>
+                    <li>Every destination visually verified against the DOT noise map</li>
+                    <li>+5 to +10 bonus for exceptionally quiet readings (&lt;45 dB)</li>
+                    <li>-10 to -50 penalty for elevated noise (&gt;50 dB)</li>
+                </ul>
+                
+                <h3>Why Map Verification Matters</h3>
+                <p>Formula-based rankings miss hidden noise sources: active rail lines, flight paths, acoustic canyon effects, and seasonal traffic. We checked every destination against the actual federal noise measurements to catch what formulas miss.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         CTA
+    ============================================ -->
+    <section class="cta">
+        <div class="cta-inner">
+            <h2>Use This Data</h2>
+            <p>Journalists and travel writers: the full dataset is available for download. Please credit with a link back.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn--primary" id="downloadBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Download CSV
+                </a>
+                <a href="mailto:press@example.com" class="btn btn--secondary">
+                    Media Inquiries
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer>
+        <p>Data: U.S. DOT Bureau of Transportation Statistics, <a href="https://www.bts.gov/geospatial/national-transportation-noise-map" target="_blank">National Transportation Noise Map</a> (2020). Last updated January 2025.</p>
+    </footer>
+    
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 4 + 's';
+            star.style.animationDuration = (3 + Math.random() * 3) + 's';
+            starsContainer.appendChild(star);
+        }
+        
+        // Data
+        const townData = [
+            { rank: 1, town: "Baker", state: "NV", db: "< 40 dB", dbNum: 35, score: 110, note: "The Void. Darkest pixel on the map." },
+            { rank: 1, town: "Terlingua", state: "TX", db: "< 40 dB", dbNum: 35, score: 110, note: "Desert Void. Only noise is the wind." },
+            { rank: 3, town: "Grafton", state: "VT", db: "40–45 dB", dbNum: 42, score: 103, note: "Historic Silence. No map footprint." },
+            { rank: 4, town: "Stanley", state: "ID", db: "40–45 dB", dbNum: 42, score: 101, note: "Dark Sky. Deep valley isolation." },
+            { rank: 5, town: "Lake City", state: "CO", db: "40–45 dB", dbNum: 42, score: 101, note: "Wilderness. Dead-end road." },
+            { rank: 6, town: "Westcliffe", state: "CO", db: "40–45 dB", dbNum: 42, score: 101, note: "Bypassed. Mountains block noise." },
+            { rank: 7, town: "Philipsburg", state: "MT", db: "40–45 dB", dbNum: 42, score: 101, note: "Hidden. Tucked away from I-90." },
+            { rank: 8, town: "Castine", state: "ME", db: "40–45 dB", dbNum: 42, score: 100, note: "Dead End. Coastal peninsula." },
+            { rank: 9, town: "Patagonia", state: "AZ", db: "45–50 dB", dbNum: 47, score: 100, note: "Desert. Very quiet, slight road hum." },
+            { rank: 10, town: "Lubec", state: "ME", db: "40–45 dB", dbNum: 42, score: 100, note: "End of World. Ocean silence." },
+            { rank: 11, town: "Lanesboro", state: "MN", db: "45–50 dB", dbNum: 47, score: 98, note: "Valley. Bluffs block noise." },
+            { rank: 12, town: "Rangeley", state: "ME", db: "50–55 dB", dbNum: 52, score: 98, note: "Forest. Quiet, but on a road corridor." },
+            { rank: 13, town: "Greenville", state: "ME", db: "55–60 dB", dbNum: 57, score: 98, note: "Seaplanes. Lake activity audible." },
+            { rank: 14, town: "Paonia", state: "CO", db: "45–50 dB", dbNum: 47, score: 96, note: "Buffered. Orchards block highway." },
+            { rank: 15, town: "Taos Ski Valley", state: "NM", db: "45–50 dB", dbNum: 47, score: 96, note: "Dead End. Road terminates here." },
+            { rank: 16, town: "Blue Hill", state: "ME", db: "45–50 dB", dbNum: 47, score: 95, note: "Rural. Low traffic density." },
+            { rank: 17, town: "Washburn", state: "WI", db: "45–50 dB", dbNum: 47, score: 95, note: "Lake. Quiet side of the bay." },
+            { rank: 18, town: "Bayfield", state: "WI", db: "45–50 dB", dbNum: 47, score: 95, note: "Ferry. Quiet night, busy day." },
+            { rank: 19, town: "Elk", state: "CA", db: "45–50 dB", dbNum: 47, score: 95, note: "Coastal. Thinner traffic than Mendocino." },
+            { rank: 20, town: "Townsend", state: "TN", db: "45–50 dB", dbNum: 47, score: 93, note: "Smokies. Quiet side of the park." },
+            { rank: 21, town: "Ely", state: "MN", db: "50–60 dB", dbNum: 55, score: 88, note: "Edge. Main St trucks hurt score." },
+            { rank: 22, town: "Floyd", state: "VA", db: "50–55 dB", dbNum: 52, score: 88, note: "Crossroads. Constant low-speed traffic." },
+            { rank: 23, town: "Crested Butte", state: "CO", db: "50–55 dB", dbNum: 52, score: 86, note: "Tourist. Main drag is busy." },
+            { rank: 24, town: "Cooke City", state: "MT", db: "50–55 dB", dbNum: 52, score: 86, note: "Seasonal. Summer traffic jams." },
+            { rank: 25, town: "Baileys Harbor", state: "WI", db: "45–50 dB", dbNum: 47, score: 85, note: "Quiet Side. Away from busy Door Cty." },
+            { rank: 26, town: "Grand Marais", state: "MN", db: "50–55 dB", dbNum: 52, score: 85, note: "Hwy 61. Loud road, masked by waves." },
+            { rank: 27, town: "Orcas Island", state: "WA", db: "50–55 dB", dbNum: 52, score: 85, note: "Ferry. Landing area is loud." },
+            { rank: 28, town: "Point Arena", state: "CA", db: "50–60 dB", dbNum: 55, score: 85, note: "Hwy 1. Road cuts through town." },
+            { rank: 29, town: "Salmon", state: "ID", db: "55–60 dB", dbNum: 57, score: 76, note: "Hwy Town. Built on the highway." },
+            { rank: 30, town: "Red Lodge", state: "MT", db: "55–60 dB", dbNum: 57, score: 76, note: "Echo. Canyon walls trap noise." },
+            { rank: 31, town: "Talkeetna", state: "AK", db: "55–65 dB", dbNum: 60, score: 76, note: "Aviation. Constant bush planes." },
+            { rank: 32, town: "Hot Springs", state: "NC", db: "55–60 dB", dbNum: 57, score: 76, note: "Train. Rail line through town." },
+            { rank: 33, town: "Highlands", state: "NC", db: "55–60 dB", dbNum: 57, score: 76, note: "Engines. Winding road noise." },
+            { rank: 34, town: "Pinedale", state: "WY", db: "55–60 dB", dbNum: 57, score: 76, note: "Linear. Strip town on highway." },
+            { rank: 35, town: "Manzanita", state: "OR", db: "55–60 dB", dbNum: 57, score: 75, note: "Hwy 101. Audible traffic." },
+            { rank: 36, town: "Lopez Island", state: "WA", db: "55–60 dB", dbNum: 57, score: 75, note: "Ferry. Landing noise." },
+            { rank: 37, town: "Friday Harbor", state: "WA", db: "55–65 dB", dbNum: 60, score: 75, note: "Hub. Busiest San Juan island." },
+            { rank: 38, town: "Coupeville", state: "WA", db: "55–65 dB", dbNum: 60, score: 75, note: "JETS. Naval Air Station noise." },
+            { rank: 39, town: "Bandon", state: "OR", db: "55–65 dB", dbNum: 60, score: 75, note: "Cut. Hwy 101 bisects town." },
+            { rank: 40, town: "Yachats", state: "OR", db: "55–65 dB", dbNum: 60, score: 75, note: "Linear. Hwy 101 traffic." },
+            { rank: 41, town: "Oracle", state: "AZ", db: "50–55 dB", dbNum: 52, score: 75, note: "Set Back. Offset from highway." },
+            { rank: 42, town: "Bigfork", state: "MT", db: "55–65 dB", dbNum: 60, score: 71, note: "Grid. Two highways encircle it." },
+            { rank: 43, town: "Marfa", state: "TX", db: "60–70 dB", dbNum: 65, score: 70, note: "Train. Active rail line." },
+            { rank: 44, town: "Jerome", state: "AZ", db: "60–70 dB", dbNum: 65, score: 70, note: "Echo. Motorcycles on cliff road." },
+            { rank: 45, town: "Bisbee", state: "AZ", db: "60–70 dB", dbNum: 65, score: 70, note: "Echo. Vertical walls reflect sound." },
+            { rank: 46, town: "Kanab", state: "UT", db: "65–75 dB", dbNum: 70, score: 70, note: "Trucks. Freight corridor." },
+            { rank: 47, town: "Beatty", state: "NV", db: "60–70 dB", dbNum: 65, score: 70, note: "Trucks. US-95 freight stop." },
+            { rank: 48, town: "Lindsborg", state: "KS", db: "40–45 dB", dbNum: 42, score: 68, note: "Hidden Gem. Map proves it's quiet." },
+            { rank: 49, town: "Silverton", state: "CO", db: "60–65 dB", dbNum: 62, score: 66, note: "Trap. Train & Truck echoes." },
+            { rank: 50, town: "Clayton", state: "GA", db: "65–70 dB", dbNum: 67, score: 66, note: "Strip. 4-lane commercial road." },
+            { rank: 51, town: "Blowing Rock", state: "NC", db: "60–70 dB", dbNum: 65, score: 66, note: "Parkway. Constant tourist cars." },
+            { rank: 52, town: "Bryson City", state: "NC", db: "60–70 dB", dbNum: 65, score: 66, note: "Train. 4-lane Hwy + Railroad." },
+            { rank: 53, town: "Thermopolis", state: "WY", db: "60–70 dB", dbNum: 65, score: 66, note: "Trap. River/Rail/Road squeeze." },
+            { rank: 54, town: "Mendocino", state: "CA", db: "60–65 dB", dbNum: 62, score: 65, note: "Traffic. Solid red band of cars." },
+            { rank: 55, town: "Port Orford", state: "OR", db: "60–65 dB", dbNum: 62, score: 65, note: "Speed. Hwy 101 stays loud." },
+            { rank: 56, town: "Galena", state: "IL", db: "60–70 dB", dbNum: 65, score: 63, note: "Echo. Valley traps traffic noise." },
+            { rank: 57, town: "Woodstock", state: "VT", db: "55–60 dB", dbNum: 57, score: 63, note: "Hum. Tourist traffic constant." },
+            { rank: 58, town: "Trinidad", state: "CA", db: "55–60 dB", dbNum: 57, score: 60, note: "Exit. Next to Hwy 101." },
+            { rank: 59, town: "Pella", state: "IA", db: "55–65 dB", dbNum: 60, score: 60, note: "Ag. Busy commercial center." },
+            { rank: 60, town: "Sitka", state: "AK", db: "50–60 dB", dbNum: 55, score: 60, note: "Island. Airport is very close." },
+            { rank: 61, town: "Port Angeles", state: "WA", db: "65–75 dB", dbNum: 70, score: 58, note: "Grid. Solid red noise map." },
+            { rank: 62, town: "Boone", state: "NC", db: "60–70 dB", dbNum: 65, score: 56, note: "Uni. Density + Traffic = Loud." },
+            { rank: 63, town: "Littleton", state: "NH", db: "60–70 dB", dbNum: 65, score: 56, note: "I-93. Runs right through town." },
+            { rank: 64, town: "Port Townsend", state: "WA", db: "60–65 dB", dbNum: 62, score: 55, note: "Mill. Industrial hum + Fog horns." },
+            { rank: 65, town: "Camano Island", state: "WA", db: "65–75 dB", dbNum: 70, score: 55, note: "Jams. Single entry point traffic." },
+            { rank: 66, town: "Astoria", state: "OR", db: "60–70 dB", dbNum: 65, score: 55, note: "Bridge. Heavy traffic + ships." },
+            { rank: 67, town: "Homer", state: "AK", db: "55–65 dB", dbNum: 60, score: 50, note: "Airport. Runway in town." },
+            { rank: 68, town: "Truckee", state: "CA", db: "65–75 dB", dbNum: 70, score: 46, note: "I-80. Interstate + Jets." },
+            { rank: 69, town: "Lake City", state: "MN", db: "70–80 dB", dbNum: 75, score: 45, note: "Rail. Train line along river." },
+            { rank: 70, town: "Pahrump", state: "NV", db: "65–75 dB", dbNum: 70, score: 45, note: "Commuter. Vegas traffic roar." },
+            { rank: 71, town: "Marquette", state: "MI", db: "60–70 dB", dbNum: 65, score: 40, note: "Urban. Regional traffic hub." },
+            { rank: 72, town: "Abingdon", state: "VA", db: "70–80 dB", dbNum: 75, score: 38, note: "Planes. Airport + I-81 noise." },
+            { rank: 73, town: "Franconia", state: "NH", db: "75–80 dB", dbNum: 77, score: 38, note: "Notch. I-93 echoes in pass." },
+            { rank: 74, town: "Wallace", state: "ID", db: "75–80 dB", dbNum: 77, score: 38, note: "Overhead. I-90 runs above town." },
+            { rank: 75, town: "Spearfish", state: "SD", db: "75–80 dB", dbNum: 77, score: 28, note: "Bleed. I-90 noise covers town." },
+            { rank: 76, town: "Chadron", state: "NE", db: "75–80 dB", dbNum: 77, score: 23, note: "Cross. Trucking route intersection." }
+        ];
+        
+        // Render table
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = data.map(row => {
+                let pillClass = 'quiet';
+                if (row.dbNum >= 65) pillClass = 'loud';
+                else if (row.dbNum >= 55) pillClass = 'noisy';
+                else if (row.dbNum >= 50) pillClass = 'moderate';
+                else if (row.dbNum >= 45) pillClass = 'good';
+                
+                return `
+                    <tr>
+                        <td class="rank-col">${row.rank}</td>
+                        <td class="town-col">${row.town}</td>
+                        <td>${row.state}</td>
+                        <td><span class="db-pill db-pill--${pillClass}">${row.db}</span></td>
+                        <td class="score-col">${row.score}</td>
+                        <td class="note-col">${row.note}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        renderTable(townData);
+        
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const filtered = townData.filter(row => 
+                row.town.toLowerCase().includes(query) || 
+                row.state.toLowerCase().includes(query)
+            );
+            renderTable(filtered);
+        });
+        
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                let filtered = townData;
+                
+                if (filter === 'quiet') filtered = townData.filter(row => row.dbNum < 50);
+                else if (filter === 'moderate') filtered = townData.filter(row => row.dbNum >= 50 && row.dbNum < 65);
+                else if (filter === 'loud') filtered = townData.filter(row => row.dbNum >= 65);
+                
+                renderTable(filtered);
+            });
+        });
+        
+        // Sorting
+        let sortDir = {};
+        document.querySelectorAll('.data-table th[data-sort]').forEach(th => {
+            th.addEventListener('click', function() {
+                const key = this.dataset.sort;
+                sortDir[key] = !sortDir[key];
+                
+                const sorted = [...townData].sort((a, b) => {
+                    let valA, valB;
+                    if (key === 'rank' || key === 'score') {
+                        valA = a[key]; valB = b[key];
+                    } else if (key === 'db') {
+                        valA = a.dbNum; valB = b.dbNum;
+                    } else {
+                        valA = a[key].toLowerCase(); valB = b[key].toLowerCase();
+                    }
+                    
+                    if (valA < valB) return sortDir[key] ? -1 : 1;
+                    if (valA > valB) return sortDir[key] ? 1 : -1;
+                    return 0;
+                });
+                
+                renderTable(sorted);
+            });
+        });
+        
+        // Methodology toggle
+        document.getElementById('methodToggle').addEventListener('click', function() {
+            this.classList.toggle('open');
+            document.getElementById('methodContent').classList.toggle('open');
+        });
+        
+        // CSV Download
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const headers = ['Rank', 'Town', 'State', 'Noise Level', 'Score', 'Notes'];
+            const csv = [
+                headers.join(','),
+                ...townData.map(row => [
+                    row.rank,
+                    `"${row.town}"`,
+                    row.state,
+                    `"${row.db}"`,
+                    row.score,
+                    `"${row.note}"`
+                ].join(','))
+            ].join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'escape-the-noise-destinations-2025.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
